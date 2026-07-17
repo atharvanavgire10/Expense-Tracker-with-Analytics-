@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-display: "Inter", "sans-serif";
+    --breakpoint-3xl: 1920px;
+    --color-primary: #0f172a;
+}
+
+@layer base{
+    html{
+        font-family: var(--font-display);
+    }
+
+    body{
+        background-color: #f3f4f6;
+        overflow-x: hidden;
+        color: #111827;
+    }
+}
+
+/* INPUT */
+
+.input-box {
+    @apply w-full text-sm text-gray-900 bg-white 
+    rounded-md px-4 py-3 mt-2
+    border border-gray-300 
+    focus:outline-none focus:ring-1 focus:ring-[#0f172a] focus:border-[#0f172a];
+}
+
+/* PRIMARY BUTTON */
+
+.btn-primary{
+    @apply w-full text-sm font-semibold text-white 
+    bg-[#0f172a] 
+    px-4 py-2.5 rounded-md 
+    transition 
+    hover:bg-[#1e293b];
+}
+
+/* CARD CONTAINER */
+
+.card{
+    @apply bg-white p-6 rounded-lg 
+    shadow-md border border-gray-200;
+}
+
+/* CARD HEADER BUTTON */
+
+.card-btn{
+    @apply flex items-center gap-2 text-sm font-medium 
+    text-[#0f172a] 
+    hover:underline 
+    cursor-pointer;
+}
+
+/* SECONDARY ACTION BUTTON */
+
+.add-btn{
+    @apply flex items-center gap-2 text-sm font-medium 
+    text-[#0f172a] 
+    bg-gray-100 
+    border border-gray-300 
+    px-4 py-2 rounded-md 
+    hover:bg-gray-200 
+    cursor-pointer;
+}
+
+/* FILLED ACTION BUTTON */
+
+.add-btn-fill{
+    @apply text-white bg-[#0f172a] hover:bg-[#1e293b];
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.35s ease-out forwards;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-dropdownFade {
+  animation: dropdownFade 0.18s ease-out;
+}
